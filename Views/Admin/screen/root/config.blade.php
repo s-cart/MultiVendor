@@ -23,18 +23,6 @@
               </span>
             </td>
           </tr>
-          <tr>
-            <td>{{ sc_language_render('multi_vendor.MultiVendor_commission') }}</td>
-            <td>
-              <a href="#" class="MultiVendor_commission data-MultiVendor_commission"  data-name="MultiVendor_commission" data-type="number" data-pk="" data-url="{{ sc_route_admin('admin_config_global.update') }}" data-title="{{ sc_language_render('multi_vendor.MultiVendor_commission') }}">{{ sc_config_global('MultiVendor_commission') }}</a> %
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2"><span class="text-sm">
-                <i class="fa fa-info-circle"></i> {{ sc_language_render('multi_vendor.MultiVendor_commission_help') }}
-              </span>
-            </td>
-          </tr>
            <tr>
             <td>{{ sc_language_render('multi_vendor.MultiVendor_allow_register') }}</td>
             <td><input class="check-data-config-global" type="checkbox" name="MultiVendor_allow_register"  {{ sc_config_global('MultiVendor_allow_register') ? "checked":"" }}></td>
@@ -108,34 +96,7 @@ $(document).ready(function() {
             alertJs('error', response.msg);
           }
       }
-    });
-
-    $('.MultiVendor_commission').editable({
-      ajaxOptions: {
-      type: 'post',
-      dataType: 'json'
-      },
-      validate: function(value) {
-        if (value == '') {
-            return '{{  sc_language_render('admin.not_empty') }}';
-        }
-        if (!$.isNumeric(value)) {
-            return '{{  sc_language_render('admin.only_numeric') }}';
-        }
-        if (parseInt(value) < 0) {
-          return '{{  sc_language_render('admin.gt_numeric_0') }}';
-        }
-     },
-  
-      success: function(response, newValue) {
-        if(response.error == 0){
-          alertJs('success', '{{ sc_language_render('admin.msg_change_success') }}');
-        } else {
-          alertJs('error', response.msg);
-        }
-    }
-  });
-  
+    }); 
 });
 
 
