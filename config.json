@@ -7,6 +7,6 @@
     "configGroup": "Plugins",
     "configCode": "Other",
     "configKey": "MultiVendor",
-    "version": "2.2",
+    "version": "2.3",
     "scartVersion": "7.1|7.2|8.0|8.1|8.2"
 }
