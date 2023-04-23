@@ -7,7 +7,7 @@ namespace App\Plugins\Other\MultiVendor\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 // use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Passport\HasApiTokens;
+use Laravel\Sanctum\HasApiTokens;
 use SCart\Core\Front\Models\ShopEmailTemplate;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
